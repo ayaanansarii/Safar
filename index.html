@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safar | Curated International & Domestic Travel for Indian Globetrotters</title>
+  <meta name="description" content="Safar is India's premier bespoke travel agency. Handcrafted international tours, guaranteed visa support, authentic Indian & Jain meals abroad, and luxury stays.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Minimalist Utility / Announcement Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#" class="brand-logo" aria-label="Safar Home">
+        <svg class="brand-symbol" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="12 6 15 12 12 18 9 12 12 6" fill="currentColor"></polygon>
+        </svg>
+        <span class="brand-name">Safar</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#destinations" class="nav-item">Destinations</a>
+        <a href="#packages" class="nav-item">Tour Packages</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#reviews" class="nav-item">Testimonials</a>
+        <a href="#deals" class="nav-item">Offers</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="currency-wrapper">
+          <select id="currencySelect" class="currency-pill" aria-label="Currency Selector">
+            <option value="INR" selected>₹ INR</option>
+            <option value="USD">$ USD</option>
+            <option value="EUR">€ EUR</option>
+            <option value="AED">AED</option>
+          </select>
+        </div>
+
+        <button class="wishlist-icon-btn" id="headerWishlistBtn" title="Saved tours" aria-label="View Saved Tours">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span class="wishlist-badge" id="wishlistCount">0</span>
+        </button>
+
+        <button class="btn-pill btn-pill--dark" id="btnBookHeader" onclick="window.openBookingModal()">
+          <span>Book Tour</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO (Framed Rounded Card matching Reference) -->
+    <section class="hero-section">
+      <div class="hero-frame">
+        <div class="hero-image-wrap">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=85" alt="Traveler looking at pristine fjord waters" class="hero-img">
+          <div class="hero-gradient-overlay"></div>
+          
+          <div class="hero-inner-content">
+            <h1 class="hero-main-title">Your next adventure is one click away</h1>
+            <p class="hero-caption">Handcrafted international tours tailored for Indian travelers. Guaranteed visa guidance, authentic Indian &amp; Jain meals abroad, and 5-star hospitality.</p>
+            <div class="hero-action-row">
+              <button class="btn-pill btn-pill--white" onclick="document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' })">
+                Explore Now
+              </button>
+              <button class="btn-pill btn-pill--glass" onclick="window.openBookingModal()">
+                Request Quote
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reference Trust Metrics Strip directly below hero card -->
+        <div class="hero-metrics-strip">
+          <div class="metric-item">
+            <span class="metric-dot"></span>
+            <span>Over 500+ Popular Destinations Worldwide</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-dot"></span>
+            <span>100% Visa Assistance for Indian Passports</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-dot"></span>
+            <span>Dedicated 24/7 Hindi &amp; English Concierge</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE BEST TRIPS, THE TRUE JOURNEY (Exact Reference match) -->
+    <section class="section section--light">
+      <div class="content-container text-center">
+        <span class="script-accent">explore the world</span>
+        <h2 class="editorial-title">The best trips, the true journey</h2>
+        <p class="editorial-sub">
+          We will make your travel memories sweeter and hassle-free. Thoughtfully curated itineraries, private transfers, and Indian meals in every corner of the world.
+        </p>
+
+        <!-- Staggered 4-Card Layered Gallery (Direct Reference Match) -->
+        <div class="staggered-photocards">
+          <div class="photocard photocard--1" onclick="window.openTourModal('dubai-luxury')">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=600&q=80" alt="Dubai desert dunes">
+            <div class="photocard__label">
+              <span class="photocard__title">Dubai Dunes</span>
+              <span class="photocard__price">From ₹59,999</span>
+            </div>
+          </div>
+
+          <div class="photocard photocard--2" onclick="window.openTourModal('swiss-paris')">
+            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=600&q=80" alt="Swiss Alps snowy peaks">
+            <div class="photocard__label">
+              <span class="photocard__title">Swiss Alps &amp; Titlis</span>
+              <span class="photocard__price">From ₹1,79,999</span>
+            </div>
+          </div>
+
+          <div class="photocard photocard--3" onclick="window.openTourModal('singapore-malaysia')">
+            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=600&q=80" alt="Singapore skyline">
+            <div class="photocard__label">
+              <span class="photocard__title">Singapore Marina</span>
+              <span class="photocard__price">From ₹78,500</span>
+            </div>
+          </div>
+
+          <div class="photocard photocard--4" onclick="window.openTourModal('bali-paradise')">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Tropical turquoise beach">
+            <div class="photocard__label">
+              <span class="photocard__title">Bali Island Dream</span>
+              <span class="photocard__price">From ₹64,999</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="photocard-caption-text">
+          Handcrafted international and domestic holiday packages designed for Indian travelers.
+        </p>
+        <a href="#destinations" class="editorial-link">Explore more packages &rarr;</a>
+
+        <!-- 6-Box Minimalist Value Grid (Direct Reference Match) -->
+        <div class="minimal-grid-box">
+          <div class="grid-cell">
+            <div class="cell-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h4 class="cell-title">Curated Itineraries</h4>
+            <p class="cell-text">Tailored daily schedules ensuring a relaxed holiday pace for families, couples, and groups.</p>
+          </div>
+
+          <div class="grid-cell">
+            <div class="cell-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+            </div>
+            <h4 class="cell-title">Seamless Visa Support</h4>
+            <p class="cell-text">End-to-end documentation, appointment slots, and paperwork review for Schengen, UK, US, &amp; UAE.</p>
+          </div>
+
+          <div class="grid-cell">
+            <div class="cell-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h4 class="cell-title">Fast Reservation</h4>
+            <p class="cell-text">Instant booking confirmation with nominal 20% deposit and flexible 0% interest EMI options.</p>
+          </div>
+
+          <div class="grid-cell">
+            <div class="cell-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7c-.5-.1-.9.1-1.2.4L3 8.2l6.2 3.8-3.3 3.3-2.1-.5-1.4 1.4 2.8 1.9 1.9 2.8 1.4-1.4-.5-2.1 3.3-3.3 3.8 6.2 1.1-1.1c.3-.3.5-.7.4-1.2z"/></svg>
+            </div>
+            <h4 class="cell-title">Flights &amp; 4/5★ Stays</h4>
+            <p class="cell-text">Prime centrally located luxury hotels with direct flight connections from major Indian airports.</p>
+          </div>
+
+          <div class="grid-cell">
+            <div class="cell-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+            </div>
+            <h4 class="cell-title">Indian &amp; Jain Dining</h4>
+            <p class="cell-text">Dedicated hot Indian vegetarian meals and strict Jain food options pre-arranged throughout the journey.</p>
+          </div>
+
+          <div class="grid-cell">
+            <div class="cell-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h4 class="cell-title">24/7 Concierge Support</h4>
+            <p class="cell-text">Dedicated Hindi and English on-trip managers on call via WhatsApp to assist anytime.</p>
+          </div>
+        </div>
+
+        <!-- Airline Partners Strip -->
+        <div class="partners-simple-strip">
+          <span class="partner-name">Emirates</span>
+          <span class="partner-name">Singapore Airlines</span>
+          <span class="partner-name">Qatar Airways</span>
+          <span class="partner-name">IndiGo</span>
+          <span class="partner-name">Air India</span>
+          <span class="partner-name">Swiss Air</span>
+          <span class="partner-name">IATA Accredited</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TOP 10 DESTINATIONS TRAVELERS LOVE (Exact Reference Match) -->
+    <section class="section section--light" id="destinations">
+      <div class="content-container">
+        <div class="section-title-split">
+          <div>
+            <h2 class="editorial-title">Top 10 Destinations Travelers love</h2>
+          </div>
+          <div>
+            <a href="#destinations" class="editorial-link" onclick="window.filterByCategory('all')">View all destinations &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Filter tabs for quick exploration -->
+        <div class="category-tabs-clean">
+          <button class="cat-pill active" data-category="all" onclick="window.filterByCategory('all')">All Destinations</button>
+          <button class="cat-pill" data-category="europe" onclick="window.filterByCategory('europe')">Europe</button>
+          <button class="cat-pill" data-category="southeast-asia" onclick="window.filterByCategory('southeast-asia')">Southeast Asia</button>
+          <button class="cat-pill" data-category="middle-east" onclick="window.filterByCategory('middle-east')">Middle East</button>
+          <button class="cat-pill" data-category="islands" onclick="window.filterByCategory('islands')">Island Escapes</button>
+          <button class="cat-pill" data-category="east-asia" onclick="window.filterByCategory('east-asia')">East Asia</button>
+          <button class="cat-pill" data-category="india" onclick="window.filterByCategory('india')">Incredible India</button>
+        </div>
+
+        <!-- 6-Card Destination Grid (Direct visual match to reference) -->
+        <div class="destinations-clean-grid" id="destinationsCleanGrid">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: WATERMARK TYPOGRAPHY BREAK "Travel & Tour" (Direct Reference Match) -->
+    <section class="watermark-section">
+      <div class="watermark-container">
+        <span class="wm-side">explore</span>
+        <h2 class="wm-center">Travel &amp; Tour</h2>
+        <span class="wm-side">perfect trip</span>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EXPERIENCE THE WONDER IN MOTION (Direct Reference Match) -->
+    <section class="section section--light" id="experience">
+      <div class="content-container">
+        <div class="text-center" style="margin-bottom: 2.75rem;">
+          <span class="script-accent">explore more</span>
+          <h2 class="editorial-title">Experience the wonder in motion</h2>
+        </div>
+
+        <div class="experience-two-col">
+          <!-- Left: Big rounded scenic photo with interactive toggle button -->
+          <div class="experience-left-card">
+            <img id="expHeroImg" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85" alt="Nusa Penida Kelingking Beach Bali" class="exp-photo">
+            
+            <button class="exp-circular-toggle" id="expPlayBtn" title="Switch Destination Preview" aria-label="Switch Destination">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </button>
+
+            <!-- Destination selector pills below photo -->
+            <div class="exp-pills-bar">
+              <button class="exp-sel-pill active" data-exp="bali">Bali Island</button>
+              <button class="exp-sel-pill" data-exp="swiss">Swiss Alps</button>
+              <button class="exp-sel-pill" data-exp="dubai">Dubai Safari</button>
+              <button class="exp-sel-pill" data-exp="japan">Japan Sakura</button>
+            </div>
+          </div>
+
+          <!-- Right: 3 Clean feature rows with subtle line icons matching reference -->
+          <div class="experience-right-details">
+            <div class="exp-row-item">
+              <div class="exp-row-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"></path><path d="M10 9h4"></path><path d="M10 13h4"></path><path d="M10 17h4"></path></svg>
+              </div>
+              <div class="exp-row-text">
+                <h4 id="expTitleHotel">Safe &amp; Luxury Accommodation</h4>
+                <p id="expDescHotel">Handpicked 4-star and 5-star verified hotels with daily breakfast, city-center locations, and dedicated Indian dining arrangements.</p>
+              </div>
+            </div>
+
+            <div class="exp-row-item">
+              <div class="exp-row-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              </div>
+              <div class="exp-row-text">
+                <h4 id="expTitleTransfer">Comfortable Private Transport</h4>
+                <p id="expDescTransfer">Air-conditioned luxury SUVs and panoramic first-class trains for smooth airport transfers and scenic landmark excursions.</p>
+              </div>
+            </div>
+
+            <div class="exp-row-item">
+              <div class="exp-row-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+              </div>
+              <div class="exp-row-text">
+                <h4 id="expTitleGuide">Verified Tour Guides &amp; Fast-Track Passes</h4>
+                <p id="expDescGuide">Skip the queues at world wonders with pre-booked entry passes and bilingual English/Hindi speaking tour managers.</p>
+              </div>
+            </div>
+
+            <!-- Trust ratings row -->
+            <div class="exp-trust-row">
+              <div class="trust-badge-item">
+                <span class="stars">★★★★★</span>
+                <span class="badge-source">Tripadvisor 5.0 (4,200+ reviews)</span>
+              </div>
+              <div class="trust-badge-item">
+                <span class="stars">★★★★★</span>
+                <span class="badge-source">Google Reviews 4.9 (12,000+ verified)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: TOP CURATED DESTINATION FOR YOUR NEXT ADVENTURE (Dark Card Banner matching Reference) -->
+    <section class="section section--dark-banner" id="packages">
+      <div class="content-container">
+        <div class="text-center" style="margin-bottom: 2.75rem;">
+          <h2 class="editorial-title text-white">Top curated destination for your next adventure</h2>
+        </div>
+
+        <div class="dark-curated-grid">
+          <!-- Card 1 -->
+          <div class="dark-curated-card" onclick="window.openTourModal('swiss-paris')">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Eiffel Tower Paris" class="dark-card-img">
+            <div class="dark-card-overlay"></div>
+            <div class="dark-card-body">
+              <span class="dark-card-tag">Bestseller</span>
+              <h3 class="dark-card-title">Paris &amp; Swiss Alps</h3>
+              <span class="dark-card-price" data-price="179999">₹1,79,999</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="dark-curated-card" onclick="window.openTourModal('japan-cherry')">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Kyoto Pagoda and Cherry Blossoms" class="dark-card-img">
+            <div class="dark-card-overlay"></div>
+            <div class="dark-card-body">
+              <span class="dark-card-tag">Trending 2026</span>
+              <h3 class="dark-card-title">Tokyo &amp; Kyoto Sakura</h3>
+              <span class="dark-card-price" data-price="195000">₹1,95,000</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="dark-curated-card" onclick="window.openTourModal('amalfi-rome')">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Amalfi Coast coastal road" class="dark-card-img">
+            <div class="dark-card-overlay"></div>
+            <div class="dark-card-body">
+              <span class="dark-card-tag">Luxury Escape</span>
+              <h3 class="dark-card-title">Amalfi Coast &amp; Rome</h3>
+              <span class="dark-card-price" data-price="189999">₹1,89,999</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: MEMORABLE JOURNEYS SHARED BY TRAVELERS (Direct Reference Match) -->
+    <section class="section section--light" id="reviews">
+      <div class="content-container">
+        <div class="section-title-split">
+          <div>
+            <h2 class="editorial-title">Memorable journeys shared by travelers</h2>
+          </div>
+        </div>
+
+        <div class="reviews-editorial-grid">
+          <!-- Left: 4.9 rating box with circular photo cutout matching reference! -->
+          <div class="rating-hero-box">
+            <div class="rh-score">4.9<sup>★</sup></div>
+            <span class="rh-sub">12,400+ authentic Indian traveler reviews</span>
+            <div class="rh-photo-cutout">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Traveler avatar">
+            </div>
+          </div>
+
+          <!-- Card 2: Editorial testimonial card with dark bottom trip bar -->
+          <div class="review-editorial-card">
+            <span class="rev-stars">★★★★★</span>
+            <p class="rev-body">
+              “Traveling to Switzerland with my parents and children was completely stress-free with Safar. Our Schengen visas were sorted in 12 days, and having hot Jain &amp; Gujarati dinners each night in Interlaken was simply unbelievable.”
+            </p>
+            <div class="rev-footer-bar">
+              <div class="rev-user-name">Sharma Family • Mumbai</div>
+              <div class="rev-trip-label">Swiss Alps (8 Days)</div>
+            </div>
+          </div>
+
+          <!-- Card 3: Editorial testimonial card with dark bottom trip bar -->
+          <div class="review-editorial-card">
+            <span class="rev-stars">★★★★★</span>
+            <p class="rev-body">
+              “Booked our Bali honeymoon through Safar. The private infinity pool villa in Seminyak and the romantic candlelight dinner at Jimbaran beach exceeded our expectations. The price in INR was completely transparent with zero hidden fees.”
+            </p>
+            <div class="rev-footer-bar">
+              <div class="rev-user-name">Sneha &amp; Rohan • Bengaluru</div>
+              <div class="rev-trip-label">Bali Honeymoon (7 Days)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: 30% MOST TRAVEL DEALS (Direct Reference Match) -->
+    <section class="section section--light" id="deals">
+      <div class="content-container">
+        <div class="deals-clean-box">
+          <div class="deals-left-info">
+            <div class="deals-huge-num">30<small>%</small></div>
+            <h3 class="deals-headline">Most travel deals</h3>
+            <p class="deals-subtext">Book your winter and spring international holidays in advance to unlock special group rates and complimentary visa service.</p>
+            <button class="btn-pill btn-pill--dark" onclick="window.openBookingModal()">
+              Book Now
+            </button>
+          </div>
+
+          <!-- Overlapping polaroid / photo prints matching reference -->
+          <div class="deals-right-photos">
+            <div class="polaroid-fan">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Beach postcard" class="pol-img pol-img--1">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Mountain postcard" class="pol-img pol-img--2">
+              <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Desert postcard" class="pol-img pol-img--3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: CURATED JOURNEYS WITH EFFORTLESS BOOKING FLOW (Direct Reference Match) -->
+    <section class="section section--light">
+      <div class="content-container">
+        <div class="text-center" style="margin-bottom: 2.75rem;">
+          <h2 class="editorial-title">Curated journeys with effortless booking flow</h2>
+        </div>
+
+        <div class="steps-clean-row">
+          <div class="step-box">
+            <span class="step-num-clean">01</span>
+            <h4 class="step-title-clean">Choose Destination</h4>
+            <p class="step-desc-clean">Select your favourite holiday package or customize dates, cities, and hotel tier with our experts.</p>
+          </div>
+
+          <div class="step-box">
+            <span class="step-num-clean">02</span>
+            <h4 class="step-title-clean">Visa &amp; Flight Booking</h4>
+            <p class="step-desc-clean">Our dedicated visa concierge prepares your paperwork, books embassy slots, and reserves flights.</p>
+          </div>
+
+          <div class="step-box">
+            <span class="step-num-clean">03</span>
+            <h4 class="step-title-clean">Fly Worry-Free</h4>
+            <p class="step-desc-clean">Receive mobile vouchers, airport pickups, guided tours, and authentic Indian meals on-trip.</p>
+          </div>
+        </div>
+
+        <!-- Dark Banner "Start a journey with us today" with fan of photos and circular badge matching reference -->
+        <div class="start-journey-banner">
+          <div class="sjb-left">
+            <h3 class="sjb-title">Start a journey with us today</h3>
+            <p class="sjb-sub">Our travel specialists in Mumbai, Delhi, &amp; Bengaluru are ready to assist you.</p>
+            <button class="btn-pill btn-pill--white" onclick="window.openBookingModal()">
+              Plan My Holiday
+            </button>
+          </div>
+
+          <div class="sjb-right">
+            <div class="sjb-photos-cluster">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=350&q=80" alt="Mountain trip" class="sjb-pic sjb-pic-1">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=350&q=80" alt="Beach trip" class="sjb-pic sjb-pic-2">
+              <div class="sjb-circle-badge">
+                <span>15%</span>
+                <small>OFF</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: COMMON TRAVEL QUESTIONS AND CLEAR ANSWERS (Direct Reference Match) -->
+    <section class="section section--light" id="faq">
+      <div class="content-container container--faq">
+        <div class="text-center" style="margin-bottom: 2.75rem;">
+          <h2 class="editorial-title">Common travel questions and clear answers</h2>
+        </div>
+
+        <div class="minimal-faq-accordion" id="faqAccordion">
+          <div class="faq-row active">
+            <button class="faq-question-btn" aria-expanded="true">
+              <span>How does Safar handle visa processing for Indian citizens?</span>
+              <span class="faq-toggle-icon">&plus;</span>
+            </button>
+            <div class="faq-body-content">
+              <p>
+                We have an in-house Visa Concierge team. We assist you from start to finish: comprehensive document checklists, appointment slot booking (for Schengen, UK, USA, etc.), travel insurance issuance, hotel &amp; flight confirmation proofs, and cover letter drafting. For visa-on-arrival/e-visa countries like Dubai, Thailand, Bali, and Vietnam, we process them seamlessly.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-row">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Are pure vegetarian and Jain meals guaranteed during international tours?</span>
+              <span class="faq-toggle-icon">&plus;</span>
+            </button>
+            <div class="faq-body-content">
+              <p>
+                Yes, 100%! We understand the food preferences of Indian families. On our group tours, we have dedicated Indian chefs or tie-ups with top-rated Indian restaurants in cities like Zurich, Interlaken, Paris, London, Tokyo, and Bangkok. Strict Jain meals (no onion, no garlic, no root vegetables) are specifically arranged upon request at zero extra charge.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-row">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>How do TCS (Tax Collected at Source) and GST work for international bookings?</span>
+              <span class="faq-toggle-icon">&plus;</span>
+            </button>
+            <div class="faq-body-content">
+              <p>
+                As per Indian regulations, international tour packages attract 5% GST and 5% TCS (for transactions up to ₹7 Lakh per financial year). The TCS is completely refundable or adjustable against your annual Indian Income Tax return (Form 26AS). We provide compliant GST &amp; TCS tax certificates with your PAN.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-row">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I pay in EMIs or flexible installments?</span>
+              <span class="faq-toggle-icon">&plus;</span>
+            </button>
+            <div class="faq-body-content">
+              <p>
+                Yes. You only need to pay a nominal 20% booking token deposit to lock in early-bird flight fares and hotel rates. The balance can be paid in milestone installments, or converted into No-Cost / Low-Cost EMI plans (3, 6, 9, or 12 months) through leading Indian banks.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-row">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What is your cancellation and refund policy?</span>
+              <span class="faq-toggle-icon">&plus;</span>
+            </button>
+            <div class="faq-body-content">
+              <p>
+                We offer flexible cancellation policies. If your visa is delayed or rejected, we refund eligible hotel and flight cancellation components minus embassy charges. For standard cancellations, notice given 30 days prior receives maximum refund.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: WANDERLUST STORIES TIPS AND TRAVEL UPDATES (Direct Reference Match) -->
+    <section class="section section--light">
+      <div class="content-container">
+        <div class="section-title-split">
+          <div>
+            <h2 class="editorial-title">Wanderlust stories tips and travel updates</h2>
+          </div>
+        </div>
+
+        <div class="blog-clean-grid">
+          <div class="blog-clean-card" onclick="window.openTourModal('swiss-paris')">
+            <div class="blog-card-media">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Europe travel guide">
+              <div class="blog-media-caption">
+                <h4>Schengen Visa Guide 2026 for Indian Passport Holders</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-clean-card" onclick="window.openTourModal('swiss-paris')">
+            <div class="blog-card-media">
+              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=600&q=80" alt="Switzerland travel guide">
+              <div class="blog-media-caption">
+                <h4>Top Indian &amp; Jain Food Spots in Interlaken and Zurich</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-clean-card" onclick="window.openTourModal('amalfi-rome')">
+            <div class="blog-card-media">
+              <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80" alt="Italy coast">
+              <div class="blog-media-caption">
+                <h4>Amalfi Coast Roadtrip: Tips for Indian Families &amp; Couples</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: TRAVEL IS BEST IN REAL LIFE (5 Real Traveler Photos matching Reference) -->
+    <section class="section section--light">
+      <div class="content-container text-center">
+        <h2 class="editorial-title" style="margin-bottom: 2.5rem;">Travel is best in real life</h2>
+
+        <div class="real-life-gallery">
+          <div class="rl-photo-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Smiling traveler">
+          </div>
+          <div class="rl-photo-card">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Traveler in desert">
+          </div>
+          <div class="rl-photo-card">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Couple traveling">
+          </div>
+          <div class="rl-photo-card">
+            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80" alt="Friends on mountain">
+          </div>
+          <div class="rl-photo-card">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Traveler laughing">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 13: THE GRAND SCENIC FOOTER WITH FROSTED GLASS & GIANT WATERMARK "Safar" (Exact Reference match) -->
+    <footer class="grand-scenic-footer">
+      <div class="footer-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80" alt="Scenic green mountains landscape" class="footer-scenic-img">
+        <div class="footer-dark-overlay"></div>
+      </div>
+
+      <div class="footer-content-inner">
+        <!-- Floating Glassmorphic Card Container matching reference -->
+        <div class="footer-frosted-card">
+          <div class="ff-top-row">
+            <div class="ff-brand-col">
+              <div class="ff-logo-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="12 6 15 12 12 18 9 12 12 6" fill="currentColor"></polygon>
+                </svg>
+                <span>Safar</span>
+              </div>
+              <p class="ff-brand-text">
+                Bespoke global travel for Indian travelers. Accredited with IATA and Ministry of Tourism India.
+              </p>
+              <div class="ff-contact-links">
+                <div>+91 1800-889-2424 (Toll-Free)</div>
+                <div>support@safar.in</div>
+              </div>
+              <form id="newsletterForm" onsubmit="event.preventDefault(); window.submitNewsletter();" class="footer-nl-form" style="margin-top: 1.25rem; display: flex; gap: 0.5rem;">
+                <input type="email" id="nlEmail" placeholder="Enter your email" required style="padding: 0.55rem 0.95rem; border-radius: 9999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 0.85rem; width: 100%;">
+                <button type="submit" class="btn-pill btn-pill--white" style="padding: 0.55rem 1rem; font-size: 0.8rem;">Join</button>
+              </form>
+            </div>
+
+            <div class="ff-nav-col">
+              <h5>Destinations</h5>
+              <ul>
+                <li><a href="#destinations" onclick="window.filterByCategory('europe')">Europe Tours</a></li>
+                <li><a href="#destinations" onclick="window.filterByCategory('middle-east')">Dubai &amp; Abu Dhabi</a></li>
+                <li><a href="#destinations" onclick="window.filterByCategory('islands')">Bali, Indonesia</a></li>
+                <li><a href="#destinations" onclick="window.filterByCategory('southeast-asia')">Singapore &amp; Malaysia</a></li>
+                <li><a href="#destinations" onclick="window.filterByCategory('india')">Kashmir &amp; Gulmarg</a></li>
+              </ul>
+            </div>
+
+            <div class="ff-nav-col">
+              <h5>About Safar</h5>
+              <ul>
+                <li><a href="#destinations">Tour Packages</a></li>
+                <li><a href="#experience">Travel Experiences</a></li>
+                <li><a href="#reviews">Guest Stories</a></li>
+                <li><a href="#deals">Special Offers</a></li>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+              </ul>
+            </div>
+
+            <div class="ff-nav-col">
+              <h5>Offices in India</h5>
+              <ul>
+                <li><strong>Mumbai:</strong> BKC, Bandra East</li>
+                <li><strong>Delhi:</strong> Barakhamba Road, Connaught Place</li>
+                <li><strong>Bengaluru:</strong> Indiranagar 100ft Road</li>
+                <li><strong>Ahmedabad:</strong> SG Highway, Bodakdev</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ff-bottom-bar">
+            <span>&copy; 2026 Safar Tours &amp; Travels India Pvt. Ltd. All rights reserved.</span>
+            <span>Accredited with IATA &amp; Incredible India Registered</span>
+          </div>
+        </div>
+
+        <!-- Giant Ambient Typography across bottom of footer: "Safar" (Matching Reference "Traveli") -->
+        <div class="footer-giant-watermark" aria-hidden="true">
+          Safar
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ============================================== -->
+  <!-- MODAL 1: TOUR ITINERARY VIEWER -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="itineraryModal" role="dialog" aria-modal="true" aria-labelledby="modalTourTitle">
+    <div class="modal-dialog modal-dialog--wide">
+      <button class="modal-close" id="closeItineraryModal" aria-label="Close modal">&times;</button>
+
+      <div class="modal-scroll-area">
+        <div class="modal-hero-banner">
+          <img id="modalTourHeroImg" src="" alt="Tour destination" class="modal-hero-photo">
+          <div class="modal-hero-gradient"></div>
+          <div class="modal-hero-info">
+            <span class="modal-tag" id="modalTourBadge">Europe Bestseller</span>
+            <h2 class="modal-title" id="modalTourTitle">Grand Swiss Alps &amp; Paris Dream</h2>
+            <p class="modal-subtitle" id="modalTourRoute">Paris • Zurich • Interlaken • Lucerne • Mt. Titlis</p>
+          </div>
+        </div>
+
+        <div class="modal-body-layout">
+          <div class="modal-main-tabs">
+            <div class="tab-buttons-bar">
+              <button class="t-btn active" data-tab="itinerary">Day-by-Day Plan</button>
+              <button class="t-btn" data-tab="inclusions">Inclusions &amp; Meals</button>
+              <button class="t-btn" data-tab="hotels">Hotels &amp; Flights</button>
+              <button class="t-btn" data-tab="visa">Visa Guidance</button>
+            </div>
+
+            <div class="tab-content active" id="tabItinerary">
+              <div class="timeline-list" id="modalTimeline"></div>
+            </div>
+
+            <div class="tab-content" id="tabInclusions">
+              <div class="inclusions-two-box">
+                <div class="inc-card inc-card--yes">
+                  <h4>What's Included:</h4>
+                  <ul id="modalInclusionsList"></ul>
+                </div>
+                <div class="inc-card inc-card--no">
+                  <h4>What's Not Included:</h4>
+                  <ul id="modalExclusionsList"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="tabHotels">
+              <div class="hotels-container" id="modalHotelsList"></div>
+            </div>
+
+            <div class="tab-content" id="tabVisa">
+              <div class="visa-container" id="modalVisaGuide"></div>
+            </div>
+          </div>
+
+          <div class="modal-sidebar-quote">
+            <div class="sb-price-block">
+              <span class="sb-label">Starting Price</span>
+              <div class="sb-price" id="modalSidebarPrice">₹1,79,999</div>
+              <span class="sb-tax-note">Per person • Incl. 5% GST &amp; TCS credit</span>
+            </div>
+
+            <div class="sb-perks-list">
+              <div class="sb-perk">&check; Flights &amp; Central 4★/5★ Hotels</div>
+              <div class="sb-perk">&check; Daily Breakfast &amp; Indian Dinners</div>
+              <div class="sb-perk">&check; 100% Visa Document Assistance</div>
+              <div class="sb-perk">&check; Pay in 0% EMI from ₹9,999/mo</div>
+            </div>
+
+            <button class="btn-pill btn-pill--dark btn-pill--full" id="modalProceedBookingBtn">
+              Calculate Quote / Book
+            </button>
+            <button class="btn-pill btn-pill--outline btn-pill--full" id="modalWhatsappEnquiryBtn">
+              Instant WhatsApp Enquiry
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL 2: BOOKING CALCULATOR & QUOTE REQUEST -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="bookingCalculatorModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="closeCalcModal" aria-label="Close modal">&times;</button>
+
+      <div class="calc-modal-content">
+        <h3 class="calc-title">Customize Your Tour Quote</h3>
+        <p class="calc-tour-label" id="calcModalTourName">Selected Tour</p>
+
+        <form id="bookingCalculatorForm" class="calc-form-body" onsubmit="event.preventDefault(); window.submitBookingInquiry();">
+          <div class="form-grid">
+            <div class="field-item">
+              <label for="bookCity">Departure City in India</label>
+              <select id="bookCity" onchange="window.recalcBookingTotal()">
+                <option value="Mumbai" selected>Mumbai (BOM)</option>
+                <option value="Delhi">Delhi (DEL)</option>
+                <option value="Bengaluru">Bengaluru (BLR)</option>
+                <option value="Hyderabad">Hyderabad (HYD)</option>
+                <option value="Ahmedabad">Ahmedabad (AMD)</option>
+                <option value="Chennai">Chennai (MAA)</option>
+                <option value="Kolkata">Kolkata (CCU)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="bookDate">Departure Date</label>
+              <input type="date" id="bookDate" required onchange="window.recalcBookingTotal()">
+            </div>
+          </div>
+
+          <div class="counters-grid">
+            <div class="counter-card">
+              <div>
+                <strong>Adults</strong>
+                <span class="sub">(12+ years)</span>
+              </div>
+              <div class="counter-btns">
+                <button type="button" onclick="window.updateCounter('adults', -1)">&minus;</button>
+                <span id="cntAdults">2</span>
+                <button type="button" onclick="window.updateCounter('adults', 1)">&plus;</button>
+              </div>
+            </div>
+
+            <div class="counter-card">
+              <div>
+                <strong>Children</strong>
+                <span class="sub">(2-11 years)</span>
+              </div>
+              <div class="counter-btns">
+                <button type="button" onclick="window.updateCounter('children', -1)">&minus;</button>
+                <span id="cntChildren">0</span>
+                <button type="button" onclick="window.updateCounter('children', 1)">&plus;</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field-item">
+              <label for="bookMeals">Meal Preference</label>
+              <select id="bookMeals">
+                <option value="veg" selected>Pure Vegetarian (Indian Meals)</option>
+                <option value="jain">Strict Jain Meals (No onion/garlic/root)</option>
+                <option value="nonveg">Standard Continental &amp; Non-Veg</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="bookFlightsOption">Flight Preference</label>
+              <select id="bookFlightsOption" onchange="window.recalcBookingTotal()">
+                <option value="included" selected>Included (Return International Flights)</option>
+                <option value="landOnly">Land Only (I will book my own flights)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Price Calculation Box -->
+          <div class="calc-summary-box">
+            <div class="cs-row">
+              <span id="pbBaseLabel">Base Fare (2 Adults)</span>
+              <span id="pbBaseVal">₹3,59,998</span>
+            </div>
+            <div class="cs-row">
+              <span>GST (5%) &amp; TCS (5% Refundable Credit)</span>
+              <span id="pbGstVal">₹35,998</span>
+            </div>
+            <div class="cs-divider"></div>
+            <div class="cs-total-row">
+              <span>Estimated Total Investment:</span>
+              <span id="pbTotalVal" class="cs-total-num">₹3,95,996</span>
+            </div>
+            <div class="cs-emi-note" id="pbEmiVal">
+              Or Pay as low as <strong>₹32,999/month</strong> with 0% EMI
+            </div>
+          </div>
+
+          <!-- Contact Fields -->
+          <div class="form-grid">
+            <div class="field-item">
+              <label for="leadName">Full Name (As per Passport)</label>
+              <input type="text" id="leadName" placeholder="Rajesh Kumar Sharma" required>
+            </div>
+            <div class="field-item">
+              <label for="leadPhone">WhatsApp / Mobile Number</label>
+              <input type="tel" id="leadPhone" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div class="field-item">
+            <label for="leadEmail">Email Address (For PDF Itinerary)</label>
+            <input type="email" id="leadEmail" placeholder="rajesh@example.com" required>
+          </div>
+
+          <button type="submit" class="btn-pill btn-pill--dark btn-pill--full" style="padding: 1rem;">
+            Request Verified Quote &amp; Callback
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL 3: CONFIRMATION SUCCESS MODAL -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="successModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog modal-dialog--sm">
+      <div class="success-box-inner">
+        <div class="success-circle-icon">&check;</div>
+        <h3 class="success-title">Your Tour Inquiry is Reserved!</h3>
+        <p class="success-msg" id="successBookingDetails">
+          Booking Reference #SFR-2026-8942 has been generated.
+        </p>
+        <p class="success-note">
+          Our destination manager will call you within 15 minutes to share the day-wise PDF itinerary and verify visa guidance.
+        </p>
+        <div class="success-action-btns">
+          <button class="btn-pill btn-pill--dark btn-pill--full" id="closeSuccessBtn">
+            Back to Destinations
+          </button>
+          <a href="#" id="directWhatsAppBtn" class="btn-pill btn-pill--outline btn-pill--full" target="_blank" rel="noopener">
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/919876543210?text=Hello%20Safar%20India!%20I%20am%20looking%20for%20an%20international%20tour%20package." 
+     class="floating-wa-btn" 
+     target="_blank" 
+     rel="noopener" 
+     title="Chat with Tour Specialist on WhatsApp" 
+     aria-label="Chat on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.652c1.746.951 3.71 1.452 5.711 1.453h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Toast notification container -->
+  <div class="toast-shelf" id="toastContainer" aria-live="polite"></div>
+
+  <script src="supabase.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

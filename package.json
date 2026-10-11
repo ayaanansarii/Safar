@@ -1,0 +1,9 @@
+{
+  "name": "safar-tours-india",
+  "version": "1.0.0",
+  "description": "Safar - Bespoke Tours & Travel Platform for Indian Globetrotters",
+  "scripts": {
+    "start": "npx -y serve -l 3000 .",
+    "serve": "python -m http.server 3000"
+  }
+}
